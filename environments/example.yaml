@@ -1,0 +1,5 @@
+preamble: This is auto generated code
+namespace: nginx
+minreplicas: 1
+maxreplicas: 3
+containerport: 8080

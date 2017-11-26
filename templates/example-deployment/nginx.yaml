@@ -1,0 +1,21 @@
+#{{.preamble}}
+kind: Deployment
+metadata:
+  name: nginx
+  namespace: {{.namespace}}
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        resources:
+          limits:
+            memory: "1000Mi"
+            cpu: "750m"
+        ports:
+        - containerPort: {{.containerport}}
