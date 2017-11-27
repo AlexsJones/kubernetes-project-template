@@ -6,6 +6,7 @@ Out of the box you get:
 - Per environment deployment settings
 - Simple deployment execution
 - Helper shell scripts to make it a seamless CI/CD process
+- Deployment directory that can be zipped and sent off.
 
 ## Requirements
 
@@ -18,3 +19,5 @@ Out of the box you get:
 with your k8s templates
 
 - Run `./build_environment.sh MYENV` or use the default environment
+  Once this command is run, there will be a deploy directory created that matches the file structure of your templates      directory.
+- `kubectl create -f deployment/example-deployment`
